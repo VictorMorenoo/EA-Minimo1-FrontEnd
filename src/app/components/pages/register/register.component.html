@@ -1,0 +1,46 @@
+<body>
+    <!-- REGISTER BODY 
+        idea of working
+            · central form with 2 inputs
+            · submit button
+    -->
+    <div [ngClass]="'banner-area'">
+        <div class='text-center' [ngClass]="'centered-div'" id='register'>
+            <form [formGroup]= "registerForm"  class="form-singup justify-content-center" id='singup-form'>
+                <br>
+                <!-- Name -->
+                <label>     Name    </label>
+                <br>
+                <input required type="text" formControlName="nameinput" #nameinput id='name' placeholder="Enter a Name">
+                
+                <!-- Descripcion -->
+                <br>
+                <label>       Descripcion     </label>
+                <br>
+                <input required type="text" formControlName="descripcioninput" #descripcioninput id='descripcion' placeholder="Enter an description">
+                
+                <!-- Resposable -->
+                <br>
+                <label>     Resposable   </label>
+                <br>
+                <input required type="text" formControlName="responsableinput" #responsableinput id='responsable' placeholder="Enter a responsable">
+                
+                <!-- Telefono -->
+                <br>
+                <label>      Number Phone   </label>
+                <br>
+                <input required type="text" formControlName="telefonoinput" #telefonoinput id='telefono' placeholder="Enter a number phone">
+                
+                <!-- Button -->
+                <br>
+                <br>
+                <button type="button" class="form-control" class="btn btn-outline-info" (click)="registerOnClick()"> Submit </button>
+                
+                <!-- If an farmacovigilancia has a registration -->
+                <div class="container">
+                    Already have a registration? <a routerLink="/all">See a list</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
